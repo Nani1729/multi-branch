@@ -24,7 +24,7 @@ pipeline {
                 branch 'branch-4' // Execute only if the branch is 'master'
             }
             steps {
-                echo 'this is branch-4
+                echo 'this is branch-4'
             }
         }
     stage('stage-3') {
