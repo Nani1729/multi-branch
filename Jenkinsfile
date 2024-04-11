@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Test') {
             when {
-                branch 'master' // Execute only if the branch is 'master'
+                not { branch 'master' } // Execute only if the branch is 'master'
             }
             steps {
                 echo 'this is master branch'
