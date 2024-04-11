@@ -21,6 +21,14 @@ pipeline {
         echo 'this is stage FOUR'
       }
     }
+    stage('Get Branch Name') {
+            steps {
+                script {
+                    def branchName = env.BRANCH_NAME
+                    echo "Current branch is: ${branchName}"
+                }
+            }
+        }
   }
 }
         
