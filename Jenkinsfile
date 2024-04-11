@@ -11,6 +11,22 @@ pipeline {
         echo 'this is stage TWO'
       }
     }
+    stage('Test') {
+            when {
+                branch 'master' // Execute only if the branch is 'master'
+            }
+            steps {
+                echo 'this is master branch'
+            }
+        }
+    stage('Test-6') {
+            when {
+                branch 'branch-4' // Execute only if the branch is 'master'
+            }
+            steps {
+                echo 'this is branch-4
+            }
+        }
     stage('stage-3') {
       steps {
         echo 'this is stage THREE'
